@@ -1,13 +1,15 @@
 "use client";
+
 import { signIn } from "next-auth/react";
+import { useEffect } from "react";
 
 export default function Login() {
-  return (
-    <div>
-      <h1>Login</h1>
-      <button onClick={() => signIn("google", { callbackUrl: "/dashboard" })}>
-        Sign in with Google
-      </button>
-    </div>
-  );
+  useEffect(() => {
+    signIn("google", {
+      callbackUrl: "/dashboard",
+      prompt: "select_account",
+    });
+  }, []);
+
+  return <p>Redirecting to Google login…</p>;
 }
