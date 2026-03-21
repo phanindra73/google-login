@@ -11,5 +11,5 @@ export default function Login() {
     });
   }, []);
 
-  return <p>Redirecting to Google login…</p>;
+  return <p>Redirecting to Google login Page…</p>;
 }
