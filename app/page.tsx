@@ -6,7 +6,7 @@ export default async function Home() {
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/login"); // ⬅️ force login
+    redirect("/login"); // ⬅️ force login to login page
   }
 
   redirect("/dashboard");
